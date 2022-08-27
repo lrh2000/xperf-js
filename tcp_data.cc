@@ -1,13 +1,17 @@
 #include <napi.h>
 #include <math.h>
 
+#pragma pack(push, 1)
+
 struct xperf_tcp_data {
 	unsigned int mss_cache;
 	unsigned long long stamp;
 	unsigned int snd_cwnd;
 	unsigned int min_rtt;
 	unsigned int blt_bw;
-} __attribute__((packed));
+};
+
+#pragma pack(pop)
 
 Napi::Value Deserialize(const Napi::CallbackInfo &info)
 {
