@@ -21,3 +21,5 @@ module.exports.Deserializer = Deserializer;
 // backends...
 const bindings = require("bindings");
 module.exports.TCP_DATA = bindings("tcp_data");
+module.exports.QUIC_DATA = bindings("quic_data");
+module.exports.QUIC_ACK = bindings("quic_ack");
